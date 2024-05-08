@@ -23,3 +23,12 @@ function Popular({rendered}) {
             })
         }
     }
+    return (
+        <PopularStyled>
+            <div className="popular-anime">
+                {conditionalRender()}
+            </div>
+            <Sidebar />
+        </PopularStyled>
+    )
+}
