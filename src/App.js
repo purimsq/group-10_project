@@ -1,10 +1,18 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AnimeItem from './Components/AnimeItem';
+import Gallery from './Components/Gallery';
+import Homepage from './Components/Homepage';
 
 function App() {
+  
   return (
-    <div>
-      <h1>Hello Group 10</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/anime/:id" element={<AnimeItem />} />
+        <Route path="/character/:id" element={<Gallery />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
